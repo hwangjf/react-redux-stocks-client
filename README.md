@@ -10,7 +10,7 @@ TO START: json-server --watch db.json -p 3001
 ```
 
 Using Redux
-* consider what is needed store, provider, createStore, reducer, combineReducers, action types, action creators, connect/dispatch, and if you want to add in redux-thunk
+* consider what is needed: store, provider, createStore, reducer, combineReducers, action types, action creators, connect/dispatch and (if you want) redux-thunk
 
 After the stocks are fetched, your job is to:
 * Add all stocks to the Redux store
@@ -18,7 +18,7 @@ After the stocks are fetched, your job is to:
 * allow a user to buy a stock by clicking on it and when it is bought
   * it should be added to an array for the user
   * it should be rendered in `My Portfolio`
-* allow a user to sell a stock in their `Portfolio` by clicking on the stock and it should be removed from their `Portfolio`
+* allow a user to sell a stock in their `Portfolio` by clicking on the stock - this should remove the stock from their `Portfolio`
 
 Things to come:
 * we are going to add a separate backend that we are going to add auth in for tomorrow

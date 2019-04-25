@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Stock from '../components/Stock'
-
-
+import { connect } from 'react-redux'
+import { getAllStocks } from '../actions'
 
 class StockContainer extends Component {
 
@@ -15,7 +15,14 @@ class StockContainer extends Component {
       </div>
     );
   }
+}
+
+function mapDispatchToProps() {
 
 }
 
-export default StockContainer;
+function mapStateToProps() {
+
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(StockContainer);

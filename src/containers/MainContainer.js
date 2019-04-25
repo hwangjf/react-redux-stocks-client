@@ -10,18 +10,18 @@ class MainContainer extends Component {
       <div>
         <SearchBar/>
 
-          <div className="row">
-            <div className="col-8">
+        <div className="row">
+          <div className="col-8">
 
-              <StockContainer/>
+            <StockContainer/>
 
-            </div>
-            <div className="col-4">
-
-              <PortfolioContainer/>
-
-            </div>
           </div>
+          <div className="col-4">
+
+            <PortfolioContainer/>
+
+          </div>
+        </div>
       </div>
     );
   }

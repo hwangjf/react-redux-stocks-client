@@ -10,3 +10,5 @@ const stocksReducer = (state = initialState, action) => {
       return state
   }
 }
+
+export default stocksReducer

@@ -6,3 +6,5 @@ const rootReducer  = combineReducers({
   user: userReducer,
   stocks: stocksReducer
 })
+
+export default rootReducer

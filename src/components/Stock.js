@@ -1,5 +1,6 @@
 import React from 'react'
 
+// /stocks
 const Stock = props => {
   const { stock } = props
   console.log(props)

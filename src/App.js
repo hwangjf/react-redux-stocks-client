@@ -7,8 +7,16 @@ import { login } from './actions'
 class App extends Component {
   
   componentDidMount() {
-    this.props.login()
+    // dispatch a POJO directly to the store
+    this.props.dispatch(login)
   }
+
+
+  // OPTION 2
+  // componentDidMount() {
+    // trigger function that is connected and invoked with dispatch(login)
+  //   this.props.login()
+  // }
 
   render() {
     console.log(this.props)
@@ -21,10 +29,23 @@ class App extends Component {
   }
 }
 
-const mapDispatchToProps = dispatch => {
+const mapStateToProps = state => {
+  // the global state
+  console.log('STATE IN APP:', state)
   return {
-    login: () => dispatch(login)
+    state
   }
 }
 
-export default connect(null, mapDispatchToProps)(App)
+// OPTION 1
+export default connect(mapStateToProps)(App)
+
+
+// OPTION 2
+// const mapDispatchToProps = dispatch => {
+//   return {
+//     login: () => dispatch(login)
+//   }
+// }
+// OPTION 2
+// export default connect(mapStateToProps, mapDispatchToProps)(App)

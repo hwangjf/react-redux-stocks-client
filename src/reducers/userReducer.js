@@ -4,7 +4,7 @@ const initialState = null
 
 const stocksReducer = (state = initialState, action) => {
   switch (action.type) {
-    case 'GET_USER':
+    case 'LOGIN':
       return {user: 'Mother Function'}
     default:
       return state

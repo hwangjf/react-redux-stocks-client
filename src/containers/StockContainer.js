@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Stock from '../components/Stock'
+import StockList from '../components/StockList'
 import { connect } from 'react-redux'
 import { getAllStocks } from '../actions'
 
@@ -24,7 +25,7 @@ class StockContainer extends Component {
         <h2>Stocks</h2>
         {
           this.props.stocks.length > 0 
-            ? this.props.stocks.map(stock => <Stock key={`stock-${stock.id}`} stock={stock} />)
+            ? <StockList stocks={this.props.stocks} />
             : null
         }
       </div>

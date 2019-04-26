@@ -2,13 +2,18 @@ import React, { Component } from 'react';
 import Header from './components/Header'
 import MainContainer from './containers/MainContainer'
 import {connect} from 'react-redux'
-import { login } from './actions'
+import { autoLogin } from './actions'
+import Navbar from './components/Navbar';
 
 class App extends Component {
   
   componentDidMount() {
     // dispatch a POJO directly to the store
-    this.props.dispatch(login)
+    // this.props.dispatch(login)
+    if (localStorage.getItem('token')) {
+      // login
+      this.props.autoLogin()
+    }
   }
 
 
@@ -23,6 +28,7 @@ class App extends Component {
     return (
       <div>
         <Header/>
+        <Navbar />
         <MainContainer/>
       </div>
     );
@@ -38,7 +44,7 @@ const mapStateToProps = state => {
 }
 
 // OPTION 1
-export default connect(mapStateToProps)(App)
+export default connect(mapStateToProps, { autoLogin })(App)
 
 
 // OPTION 2

@@ -5,7 +5,7 @@ const initialState = null
 const stocksReducer = (state = initialState, action) => {
   switch (action.type) {
     case 'LOGIN':
-      return {user: 'Mother Function'}
+      return action.payload
     default:
       return state
   }

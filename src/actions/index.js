@@ -6,11 +6,11 @@ export const getAllStocks = () => {
   // debugger
 
   // console.log(dispatch)
-  fetch('http://localhost:4000/api/v1/stocks')
-    .then(res => res.json())
-    .then(data => {
-      dispatch({ type: 'GET_ALL_STOCKS', payload: data})
-    })
+    fetch('http://localhost:4000/api/v1/stocks')
+      .then(res => res.json())
+      .then(data => {
+        dispatch({ type: 'GET_ALL_STOCKS', payload: data})
+      })
   }
 }
 
